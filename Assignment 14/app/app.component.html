@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <h1 style="color: blueviolet;">Contact Our</h1>
+  <h1>Customer Support Center</h1>
+</div>
+  <div class="image"><img src="../assets/download.jpg" width="170px" height="170px"  alt="..." float="top-right" >
+  </div>
+
+  <div>
+     <h2>  Contact Information</h2>
+  <small>Please fill out your contact Information below</small> 
+
+</div>
+
+
+  <form [formGroup] = "MarvellousForm">
+     <div></div>  
+
+  <div class="form-group">
+    <label for="fname">First Name*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('fname')?.invalid" type="text" class="form-control" formControlName="fname">
+        <small [class.d-none]="MarvellousForm.get('fname')?.valid" class="text-danger"> first name is required</small>
+    
+  </div>
+  
+  <div class="form-group">
+    <label for="lname">Last Name*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('lname')?.invalid" type="text" class="form-control" formControlName="lname">
+        <small [class.d-none]="MarvellousForm.get('lname')?.valid" class="text-danger">last name is required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="email"> EmailID*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('email')?.invalid" type="text" class="form-control" formControlName="email">
+        <small [class.d-none]="MarvellousForm.get('email')?.valid" class="text-danger">email id is required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('phone')?.invalid" type="text" class="form-control" formControlName="phone">
+        <small [class.d-none]="MarvellousForm.get('phone')?.valid" class="text-danger">phone numberis required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="city">City*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('username')?.invalid" type="text" class="form-control" formControlName="city">
+        <small [class.d-none]="MarvellousForm.get('username')?.valid" class="text-danger">city is required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="state">State:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('username')?.invalid" type="text" class="form-control" formControlName="state">
+        <small [class.d-none]="MarvellousForm.get('username')?.valid" class="text-danger">state is required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="zipcode">Zipcode*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('zipcode')?.invalid" type="text" class="form-control" formControlName="zipcode">
+        <small [class.d-none]="MarvellousForm.get('zipcode')?.valid" class="text-danger">Username is required</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="comments">Comments*:</label>
+        <input [class.is-invalid] = "MarvellousForm.get('comments')?.invalid" type="text" class="form-control" formControlName="comments">
+        <small [class.d-none]="MarvellousForm.get('comments')?.valid" class="text-danger">comments is required</small>
+    
+  </div>
+  
+  <div> 
+    
+    <button type="button" class="btn btn-secondary" >Submit form</button>
+  </div>
+
+</form>
+<div>
+{{MarvellousForm.value | json}}
+</div>
